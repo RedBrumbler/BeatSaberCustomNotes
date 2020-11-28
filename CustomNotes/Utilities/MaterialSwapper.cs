@@ -49,6 +49,7 @@ namespace CustomNotes.Utilities
                 {
                     Color oldColor = materialsCopy[i].GetColor("_Color");
                     materialsCopy[i] = material;
+                    materialsCopy[i].CopyPropertiesFromMaterial(material);
                     materialsCopy[i].SetColor("_Color", oldColor);
                     materialsDidChange = true;
                 }
